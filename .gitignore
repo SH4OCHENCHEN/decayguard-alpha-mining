@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Data / results
+data/raw/*
+data/processed/*
+results/*.csv
+results/*.jsonl
+results/*.parquet
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!results/figures/.gitkeep
+
+# OS
+.DS_Store

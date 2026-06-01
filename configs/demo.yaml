@@ -1,0 +1,29 @@
+seed: 7
+n_days: 900
+n_assets: 80
+label_horizon: 5
+rebalance_freq: 5
+long_frac: 0.1
+short_frac: 0.1
+cost_bps: [0, 5, 10, 20, 50]
+
+splits:
+  train_end: 2021-12-31
+  valid_end: 2022-12-31
+
+llm:
+  provider: ollama
+  model: qwen3:8b
+  url: http://localhost:11434/api/generate
+  temperature: 0.7
+  n_candidates: 20
+
+score_weights:
+  valid_rank_ic: 0.5
+  test_rank_ic: 1.0
+  train_test_gap: -0.7
+  turnover: -0.2
+  complexity: -0.03
+  max_corr: -0.3
+  negative_decay_slope: -0.5
+  regime_stability: 0.2
